@@ -1,0 +1,26 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{journal}[2018/02/04 Package for LaTeX Journal]
+
+\RequirePackage{tikz}
+\RequirePackage{xifthen}
+
+\newenvironment{logentry}[2]% date, heading
+{\noindent\textbf{#2}\marginnote{#1}\par}{\vspace{0.5cm}}
+
+\def\?#1{}
+
+\pgfmathtruncatemacro{\StartYear}{2018}
+\pgfmathtruncatemacro{\EndYear}{2019}
+
+\newcommand{\writetitle}{0}
+\newcommand{\mytitle}[1]
+{   \ifthenelse{\writetitle=1}{#1}{}
+}
+
+\newcommand{\Months}{%
+  January,February,March,April,May,June,July,August,September,October,November,December
+}
+
+\newread\mysource
+
+\endinput
