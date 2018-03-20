@@ -13,12 +13,8 @@
 \pgfmathtruncatemacro{\EndYear}{2019}
 
 \newcommand{\writetitle}{0}
-\newcommand{\mytitle}[1]
+\newcommand{\entrytitle}[1]
 {   \ifthenelse{\writetitle=1}{#1}{}
-}
-
-\newcommand{\Months}{%
-  January,February,March,April,May,June,July,August,September,October,November,December
 }
 
 \newread\mysource
